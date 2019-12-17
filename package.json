@@ -1,0 +1,39 @@
+{
+  "name": "asklim",
+  "version": "0.0.1",
+  "description": "Andrei S. Klim Utils Package",
+  "homepage": "https://github.com/asklim/",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "keywords": [
+    "asklim",
+    "utils"
+  ],
+  "author": "Andrei S. Klim",
+  "bugs": {
+    "url": "https://github.com/asklim/asklim/issues",
+    "email": "asklim@outlook.com"
+  },
+  "directories": {
+    "lib": "./lib",
+    "test": "./__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asklim/asklim.git"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/."
+    ],
+    "testMatch": [
+      "<rootDir>/__tests__/**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  }
+}
