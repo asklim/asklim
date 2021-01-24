@@ -1,8 +1,8 @@
 
-var { julianDay } = require('./lib/week21c/julian-day');
-var { week21c } = require('./lib/week21c/week21c');
+const { julianDay } = require( './lib/weeks/julian-day' );
+const { week21c } = require( './lib/weeks/week21c' );
 
 module.exports = {
-  julianDay,
-  week21c 
+    julianDay,
+    week21c 
 };
