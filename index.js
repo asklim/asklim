@@ -5,7 +5,7 @@ const consoleLogger = require( './lib/logger/logger' );
 
 module.exports = {
     ... weeks,
-    ... httpResponseCodes,
     ... httpResponses,
+    httpResponseCodes,
     consoleLogger,
 };
