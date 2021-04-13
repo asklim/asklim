@@ -1,6 +1,6 @@
 {
   "name": "asklim",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Andrei S. Klim",
   "description": "Andrei S. Klim Utils Package",
   "homepage": "https://github.com/asklim/",
@@ -30,10 +30,10 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
     "eslint": "^7.18.0",
     "jest": "^26.6.3"
   },
-  "dependencies": {
-    "@babel/preset-env": "^7.12.11"
+  "dependencies": {    
   }
 }
