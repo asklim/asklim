@@ -1,4 +1,8 @@
-!.eslintrc.js
+.*
+#.*rc.cjs
+*.config.cjs
+*.config.js
+# !.eslintrc.js
 static/*
 # /node_modules/* -- always ignored
 build/*

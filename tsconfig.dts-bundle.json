@@ -1,0 +1,44 @@
+{
+	"display": "Typings",
+	"compilerOptions": {
+
+        /* Language and Environment */
+
+		"target": "es2021",
+		"experimentalDecorators": true,
+
+        /* Modules */
+
+		"module": "CommonJS",
+		"rootDir": "./src",
+		"moduleResolution": "node16",
+		"resolveJsonModule": true,
+		// Explicitly set types settings so typescript doesn't auto-discover types.
+		// If all types are discovered then all types need to be included as deps
+		// or typescript may error out with TS2688: Cannot find type definition file for 'foo'.
+		// "types": [
+		// 	"node"
+		// ],
+
+        /* Emit */
+
+		"noImplicitAny": false,
+		"declaration": true,
+        // "declarationMap": true,
+		"emitDeclarationOnly": true,
+		"sourceMap": true,
+
+        /* Interop Constraints */
+
+        // "isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+
+        /* Completeness */
+
+		"skipLibCheck": false
+	},
+	"include": [
+		"src"
+	]
+}
