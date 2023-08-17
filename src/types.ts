@@ -1,3 +1,4 @@
+import type { LoggingMethod } from 'loglevel';
 
 type DateTypes = number | string | Date | undefined;
 
@@ -35,10 +36,20 @@ type WorkDateFunction = (
 
 type ResponseMessage = object | string;
 
+interface IConsoleLogger {
+    trace: LoggingMethod; // 0
+    debug: LoggingMethod; // 1
+    info: LoggingMethod;  // 2
+    warn: LoggingMethod;  // 3
+    error: LoggingMethod; // 4
+}
+
 export type {
     DateTypes,
     TItem,
     WorkDateOption,
     WorkDateFunction,
     ResponseMessage,
+    LoggingMethod,
+    IConsoleLogger,
 };

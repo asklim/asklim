@@ -4,6 +4,7 @@
 *.config.js
 # !.eslintrc.js
 static/*
+test/*
 # /node_modules/* -- always ignored
 build/*
 dist/*

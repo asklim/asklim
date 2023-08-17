@@ -4,5 +4,8 @@
         "src/**/*.ts",
         "spec/**/*.ts",
         "../spec/**/*.spec.ts"
+    ],
+    "exclude": [
+        "test/**/*"
     ]
 }

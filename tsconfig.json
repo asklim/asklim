@@ -3,6 +3,7 @@
         "src/**/*",
     ],
     "exclude": [
+        "test/**/*",
         "__tests__/**/*"
     ],
     "compilerOptions": {

@@ -9,6 +9,7 @@ export type * from './types';
 // export { default as weeks } from 'asklim/weeks';
 
 import consoleLogger from './logger/logger';
+import { Logger } from './logger/logger-class';
 import http from './http/http';
 import rsisFactory from './rsis/rsis';
 import * as weeks from './weeks/weeks';
@@ -19,6 +20,7 @@ const { version } = packageJson;
 
 export {
     consoleLogger,
+    Logger,
     http,
     rsisFactory,
     weeks,
