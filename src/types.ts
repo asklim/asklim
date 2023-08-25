@@ -1,4 +1,5 @@
 import type { LoggingMethod } from 'loglevel';
+import type { Request, Response } from 'express';
 
 type DateTypes = number | string | Date | undefined;
 
@@ -51,5 +52,7 @@ export type {
     WorkDateFunction,
     ResponseMessage,
     LoggingMethod,
+    Request,
+    Response,
     IConsoleLogger,
 };

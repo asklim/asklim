@@ -1,14 +1,10 @@
 
-import { default as HttpResponseCodes } from './http-response-codes';
+import { default as StatusCodes } from './status-codes';
 import * as ExpressResponses from './express-responses';
 
-export {
-    HttpResponseCodes,
-    ExpressResponses
+const http = {
+    StatusCodes,
+    ... ExpressResponses,
 };
-export * from './express-responses';
 
-export default {
-    HttpResponseCodes,
-    // ExpressResponses
-};
+export default http;

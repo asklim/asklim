@@ -1,8 +1,9 @@
 
-import { HttpResponseCodes as HTTP } from '../../src/http/http';
+import http from '../../src/http/http';
+const { StatusCodes: HTTP } = http;
 
 describe(
-    'HTTP Response Codes testing ...',
+    'HTTP Status Codes testing ...',
     () => {
         test(`Codes is number. And have values.`,
             () => {

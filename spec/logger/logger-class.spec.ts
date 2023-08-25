@@ -14,12 +14,12 @@ describe(
         );
         test(`Logger instance has properties.`,
             () => {
-                expect( testLog ).toHaveProperty( '_ticker' );
-                expect( testLog ).toHaveProperty( 'debug' );
-                expect( testLog ).toHaveProperty( 'info' );
-                expect( testLog ).toHaveProperty( 'warn' );
-                expect( testLog ).toHaveProperty( 'error' );
-                expect( testLog ).toHaveProperty( 'trace' );
+                expect( testLog ).toHaveProperty('_ticker');
+                expect( testLog ).toHaveProperty('debug');
+                expect( testLog ).toHaveProperty('info');
+                expect( testLog ).toHaveProperty('warn');
+                expect( testLog ).toHaveProperty('error');
+                expect( testLog ).toHaveProperty('trace');
                 expect( Object.keys( testLog ) ).toHaveLength( 6 );
             }
         );

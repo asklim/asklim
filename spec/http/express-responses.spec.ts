@@ -1,11 +1,11 @@
 
-import { ExpressResponses } from '../../src/http/http';
+import http from '../../src/http/http';
 
 const {
     sendJSONResponse,
     // send405MethodNotAllowed,
     send500ServerError,
-} = ExpressResponses;
+} = http;
 
 import { Response } from 'express';
 
@@ -28,7 +28,7 @@ class fakeRes {
     }
 }
 
-// fakeRes.status( 500 ).json( 'SERVER_ERROR' );
+// fakeRes.status( 500 ).json('SERVER_ERROR');
 // fakeRes.status( 500 ).json( { msg: 'SERVER_ERROR' } );
 
 describe(
@@ -37,23 +37,23 @@ describe(
         const res = (new fakeRes as unknown) as Response;
         test(`sendJSONResponse invoke status() and json().`,
             () => {
-                const test = sendJSONResponse( res, 500, 'SERVER_ERROR' );
-                expect( test ).toHaveProperty('fakeMsg.message', 'SERVER_ERROR' );
+                const test = sendJSONResponse( res, 500, 'SERVER_ERROR');
+                expect( test ).toHaveProperty('fakeMsg.message', 'SERVER_ERROR');
                 expect( test ).toHaveProperty('fakeCode', 500 );
             }
         );
         test(`send500ServerError invoke status() and json().`,
             () => {
-                const test = send500ServerError( res, 'SERVER_ERROR' );
-                expect( test ).toHaveProperty('fakeMsg.message', 'SERVER_ERROR' );
+                const test = send500ServerError( res, 'SERVER_ERROR');
+                expect( test ).toHaveProperty('fakeMsg.message', 'SERVER_ERROR');
                 expect( test ).toHaveProperty('fakeCode', 500 );
             }
         );
         // test(`sendJSONresponse invoke status() and json().`,
         //     () => {
         //         // send405MethodNotAllowed( res );
-        //         // send405MethodNotAllowed( res, 'send405' );
-        //         // send405MethodNotAllowed( res, 'send405' );
+        //         // send405MethodNotAllowed( res, 'send405');
+        //         // send405MethodNotAllowed( res, 'send405');
         //     }
         // );
     }

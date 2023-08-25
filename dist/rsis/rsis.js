@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rsisFactory = void 0;
 const needUnitsForPeriod_1 = __importDefault(require("./needUnitsForPeriod"));
 const workDate_1 = __importDefault(require("./workDate"));
 function rsisFactory(options = {}) {
@@ -22,6 +21,6 @@ function rsisFactory(options = {}) {
         needUnitsForPeriod: needUnitsForPeriod_1.default,
     };
 }
-exports.rsisFactory = rsisFactory;
 exports.default = rsisFactory;
+// export default rsisFactory;
 //# sourceMappingURL=rsis.js.map

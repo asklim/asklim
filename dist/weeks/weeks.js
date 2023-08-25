@@ -26,15 +26,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.week21c = exports.julianDay = exports.JDN_of_20010101 = void 0;
 const julian_day_1 = __importDefault(require("./julian-day"));
-exports.julianDay = julian_day_1.default;
 const week21c_1 = __importStar(require("./week21c"));
-Object.defineProperty(exports, "week21c", { enumerable: true, get: function () { return week21c_1.default; } });
-Object.defineProperty(exports, "JDN_of_20010101", { enumerable: true, get: function () { return week21c_1.JDN_of_20010101; } });
-exports.default = {
+const weeks = {
     JDN_of_20010101: week21c_1.JDN_of_20010101,
     julianDay: julian_day_1.default,
     week21c: week21c_1.default,
 };
+exports.default = weeks;
+// export {
+//     ...weeks
+// };
+// export default {
+//     JDN_of_20010101,
+//     julianDay,
+//     week21c,
+// };
 //# sourceMappingURL=weeks.js.map

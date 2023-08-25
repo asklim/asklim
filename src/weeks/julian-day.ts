@@ -11,7 +11,7 @@ import { DateTypes } from "../types";
  */
 export default function julianDay (gregorianDate: DateTypes ) {
 
-    if( typeof gregorianDate === 'undefined' ) {
+    if( typeof gregorianDate === 'undefined') {
         throw new Error(`invalid type of parameter 'gregorianDate'`);
     }
 

@@ -1,3 +1,5 @@
+import type { LoggingMethod } from 'loglevel';
+import type { Request, Response } from 'express';
 type DateTypes = number | string | Date | undefined;
 interface TItem {
     gid: string;
@@ -16,5 +18,12 @@ interface WorkDateOption {
 }
 type WorkDateFunction = (offset?: number, baseDay?: DateTypes) => string | undefined;
 type ResponseMessage = object | string;
-export type { DateTypes, TItem, WorkDateOption, WorkDateFunction, ResponseMessage, };
+interface IConsoleLogger {
+    trace: LoggingMethod;
+    debug: LoggingMethod;
+    info: LoggingMethod;
+    warn: LoggingMethod;
+    error: LoggingMethod;
+}
+export type { DateTypes, TItem, WorkDateOption, WorkDateFunction, ResponseMessage, LoggingMethod, Request, Response, IConsoleLogger, };
 //# sourceMappingURL=types.d.ts.map

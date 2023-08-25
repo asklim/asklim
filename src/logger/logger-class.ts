@@ -12,7 +12,7 @@ const DEBUG_SIGN_COLOR = YELLOW_BRIGHT;
 const DEBUG_MESSAGE_COLOR = YELLOW_DARK;
 
 
-export class Logger implements IConsoleLogger {
+export default class Logger implements IConsoleLogger {
 
     static setLevel (
         isProduction: boolean

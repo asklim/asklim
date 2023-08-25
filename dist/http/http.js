@@ -22,21 +22,30 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ExpressResponses = exports.HttpResponseCodes = void 0;
 const http_response_codes_1 = __importDefault(require("./http-response-codes"));
-Object.defineProperty(exports, "HttpResponseCodes", { enumerable: true, get: function () { return http_response_codes_1.default; } });
 const ExpressResponses = __importStar(require("./express-responses"));
-exports.ExpressResponses = ExpressResponses;
-__exportStar(require("./express-responses"), exports);
-exports.default = {
+// import {
+//     sendJSONResponse,
+//     send200Ok,
+//     send201Created,
+//     send204NoContent,
+//     send400BadRequest,
+//     send401UnAuthorized,
+//     send404NotFound,
+//     send405MethodNotAllowed,
+//     send409Conflict,
+//     send500ServerError,
+//     send503ServiceUnavailable,
+//     callbackError400,
+//     callbackError405
+// } from './express-responses';
+const http = {
     HttpResponseCodes: http_response_codes_1.default,
-    // ExpressResponses
+    ...ExpressResponses,
 };
+exports.default = http;
 //# sourceMappingURL=http.js.map

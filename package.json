@@ -1,6 +1,6 @@
 {
   "name": "asklim",
-  "version": "0.1.0",
+  "version": "0.1.01",
   "author": "Andrei S. Klim",
   "description": "Andrei S. Klim Utils Package",
   "type": "commonjs",
@@ -23,7 +23,7 @@
     "lint": "eslint ./spec ./src",
     "lint:fix": "eslint --fix ./spec ./src",
     "test": "jest .",
-    "spec": "jest 'spec/(.*)/logger-class.spec.ts'",
+    "spec": "jest 'spec/(.*)/asklim.spec.ts'",
     "spec:all": "jest 'spec/*/?(.*)+spec.[tj]s'",
     "spec:http": "jest 'spec/http/?(.*)+spec.[tj]s'",
     "spec:logger": "jest 'spec/logger/?(.*)+spec.[tj]s'",

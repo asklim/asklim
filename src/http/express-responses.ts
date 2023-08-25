@@ -1,31 +1,21 @@
-import { Response, Request } from 'express';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-import HTTP from './http-response-codes';
-import { ResponseMessage, } from '../types';
+// import { Request, Response } from 'express';
 
-/**
- * Send content as 'object' ONLY.
- * * res Express response object
- * * status - HTTP Status Code
- * * content - String or Object for transmition to client
- */
-export function sendJSONResponse (
-    res: Response,
-    status: number,
-    content: ResponseMessage = 'response is undefined'
-) {
-    const response = ( typeof content == 'object' ) ?
-        content
-        : { 'message': content };
-    return res.status( status ).json( response );
-}
+import type {
+    Request,
+    Response,
+    ResponseMessage,
+} from '../types';
+
+import { default as HTTP } from './status-codes';
 
 
 export function send200Ok (
     res: Response,
-    ctx = HTTP[ HTTP.OK ]
+    msg: ResponseMessage = HTTP[ HTTP.OK ]
 ) {
-    return sendJSONResponse( res, HTTP.OK, ctx );
+    return sendJSONResponse( res, HTTP.OK, msg );
 }
 
 export function send201Created (
@@ -96,9 +86,42 @@ export function send503ServiceUnavailable (
 export const callbackError400 = (
     req: Request,
     res: Response
-) => send400BadRequest( res, 'default callback http.400' );
+) => send400BadRequest( res, 'default callback http.400');
 
 export const callbackError405 = (
     req: Request,
     res: Response
-) => send405MethodNotAllowed( res, 'default callback http.405' );
+) => send405MethodNotAllowed( res, 'default callback http.405');
+
+
+/**
+ * Send content as 'object' ONLY.
+ * * res Express response object
+ * * status - HTTP Status Code
+ * * content - String or Object for transmition to client
+ */
+export function sendJSONResponse (
+    res: Response,
+    status: number,
+    content: ResponseMessage = 'response is undefined'
+) {
+    const response = ( typeof content === 'object') ?
+        content
+        : { 'message': content };
+    return res.status( status ).json( response );
+}
+
+// export default ExpressResponses;
+//     sendJSONResponse,
+//     send200Ok,
+//     send201Created,
+//     send204NoContent,
+//     send400BadRequest,
+//     send401UnAuthorized,
+//     send404NotFound,
+//     send405MethodNotAllowed,
+//     send409Conflict,
+//     send500ServerError,
+//     send503ServiceUnavailable,
+//     callbackError400,
+//     callbackError405

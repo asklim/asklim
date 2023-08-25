@@ -5,7 +5,7 @@ import needUnitsForPeriod from './needUnitsForPeriod';
 import WorkDateFactory from './workDate';
 import { WorkDateOption } from '../types';
 
-export function rsisFactory (
+export default function rsisFactory (
     options = {} as WorkDateOption
 ) {
     const {
@@ -28,4 +28,4 @@ export function rsisFactory (
     };
 }
 
-export default rsisFactory;
+// export default rsisFactory;

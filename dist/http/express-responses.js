@@ -1,25 +1,13 @@
 "use strict";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.callbackError405 = exports.callbackError400 = exports.send503ServiceUnavailable = exports.send500ServerError = exports.send409Conflict = exports.send405MethodNotAllowed = exports.send404NotFound = exports.send401UnAuthorized = exports.send400BadRequest = exports.send204NoContent = exports.send201Created = exports.send200Ok = exports.sendJSONResponse = void 0;
+exports.sendJSONResponse = exports.callbackError405 = exports.callbackError400 = exports.send503ServiceUnavailable = exports.send500ServerError = exports.send409Conflict = exports.send405MethodNotAllowed = exports.send404NotFound = exports.send401UnAuthorized = exports.send400BadRequest = exports.send204NoContent = exports.send201Created = exports.send200Ok = void 0;
 const http_response_codes_1 = __importDefault(require("./http-response-codes"));
-/**
- * Send content as 'object' ONLY.
- * * res Express response object
- * * status - HTTP Status Code
- * * content - String or Object for transmition to client
- */
-function sendJSONResponse(res, status, content = 'response is undefined') {
-    const response = (typeof content == 'object') ?
-        content
-        : { 'message': content };
-    return res.status(status).json(response);
-}
-exports.sendJSONResponse = sendJSONResponse;
-function send200Ok(res, ctx = http_response_codes_1.default[http_response_codes_1.default.OK]) {
-    return sendJSONResponse(res, http_response_codes_1.default.OK, ctx);
+function send200Ok(res, msg = http_response_codes_1.default[http_response_codes_1.default.OK]) {
+    return sendJSONResponse(res, http_response_codes_1.default.OK, msg);
 }
 exports.send200Ok = send200Ok;
 function send201Created(res, msg = http_response_codes_1.default[http_response_codes_1.default.CREATED]) {
@@ -63,4 +51,18 @@ const callbackError400 = (req, res) => send400BadRequest(res, 'default callback 
 exports.callbackError400 = callbackError400;
 const callbackError405 = (req, res) => send405MethodNotAllowed(res, 'default callback http.405');
 exports.callbackError405 = callbackError405;
+/**
+ * Send content as 'object' ONLY.
+ * * res Express response object
+ * * status - HTTP Status Code
+ * * content - String or Object for transmition to client
+ */
+function sendJSONResponse(res, status, content = 'response is undefined') {
+    const response = (typeof content === 'object') ?
+        content
+        : { 'message': content };
+    return res.status(status).json(response);
+}
+exports.sendJSONResponse = sendJSONResponse;
+// export default ExpressResponses;
 //# sourceMappingURL=express-responses.js.map
