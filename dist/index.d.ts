@@ -46,7 +46,7 @@ export declare class Logger implements IConsoleLogger {
 	error: (...args: unknown[]) => void;
 	trace: (...args: unknown[]) => void;
 }
-declare enum HttpResponseCodes {
+declare enum StatusCodes {
 	CONTINUE = 100,
 	SWITCHING_PROTOCOLS = 101,
 	PROCESSING = 102,
@@ -121,7 +121,7 @@ export declare const http: {
 	sendJSONResponse(res: import("express").Response<any, Record<string, any>>, status: number, content?: ResponseMessage): import("express").Response<any, Record<string, any>>;
 	callbackError400: (req: import("express").Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs, Record<string, any>>, res: import("express").Response<any, Record<string, any>>) => import("express").Response<any, Record<string, any>>;
 	callbackError405: (req: import("express").Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs, Record<string, any>>, res: import("express").Response<any, Record<string, any>>) => import("express").Response<any, Record<string, any>>;
-	HttpResponseCodes: typeof HttpResponseCodes;
+	StatusCodes: typeof StatusCodes;
 };
 export function rsisFactory(options?: WorkDateOption): {
 	workDate: (offset?: number, baseDay?: DateTypes) => string;

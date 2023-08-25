@@ -26,25 +26,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const http_response_codes_1 = __importDefault(require("./http-response-codes"));
+const status_codes_1 = __importDefault(require("./status-codes"));
 const ExpressResponses = __importStar(require("./express-responses"));
-// import {
-//     sendJSONResponse,
-//     send200Ok,
-//     send201Created,
-//     send204NoContent,
-//     send400BadRequest,
-//     send401UnAuthorized,
-//     send404NotFound,
-//     send405MethodNotAllowed,
-//     send409Conflict,
-//     send500ServerError,
-//     send503ServiceUnavailable,
-//     callbackError400,
-//     callbackError405
-// } from './express-responses';
 const http = {
-    HttpResponseCodes: http_response_codes_1.default,
+    StatusCodes: status_codes_1.default,
     ...ExpressResponses,
 };
 exports.default = http;
