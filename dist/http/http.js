@@ -26,10 +26,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const status_codes_1 = __importDefault(require("./status-codes"));
+// import { default as StatusCodes } from './status-codes-enum';
+const status_codes_object_1 = __importDefault(require("./status-codes-object"));
 const ExpressResponses = __importStar(require("./express-responses"));
 const http = {
-    StatusCodes: status_codes_1.default,
+    StatusCodes: status_codes_object_1.default,
     ...ExpressResponses,
 };
 exports.default = http;

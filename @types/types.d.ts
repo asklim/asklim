@@ -1,5 +1,7 @@
 import type { LoggingMethod } from 'loglevel';
 import type { Request, Response } from 'express';
+type TCodeValue = string | number;
+type TStatusCodes = Record<TCodeValue, TCodeValue>;
 type DateTypes = number | string | Date | undefined;
 interface TItem {
     gid: string;
@@ -25,5 +27,5 @@ interface IConsoleLogger {
     warn: LoggingMethod;
     error: LoggingMethod;
 }
-export type { DateTypes, TItem, WorkDateOption, WorkDateFunction, ResponseMessage, LoggingMethod, Request, Response, IConsoleLogger, };
+export type { DateTypes, TItem, TCodeValue, TStatusCodes, WorkDateOption, WorkDateFunction, ResponseMessage, LoggingMethod, Request, Response, IConsoleLogger, };
 //# sourceMappingURL=types.d.ts.map

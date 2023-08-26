@@ -1,85 +1,83 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-// import { Request, Response } from 'express';
-
 import type {
     Request,
     Response,
     ResponseMessage,
 } from '../types';
 
-import { default as HTTP } from './status-codes';
+import { default as HTTP } from './status-codes-object';
 
 
 export function send200Ok (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.OK ]
+    msg: ResponseMessage = HTTP[ HTTP.OK! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.OK, msg );
+    return sendJSONResponse( res, HTTP.OK as number, msg );
 }
 
 export function send201Created (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.CREATED ]
+    msg: ResponseMessage = HTTP[ HTTP.CREATED! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.CREATED, msg );
+    return sendJSONResponse( res, HTTP.CREATED as number, msg );
 }
 
 export function send204NoContent (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.NO_CONTENT ]
+    msg: ResponseMessage = HTTP[ HTTP.NO_CONTENT! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.NO_CONTENT, msg );
+    return sendJSONResponse( res, HTTP.NO_CONTENT as number, msg );
 }
 
 export function send400BadRequest (
     res: Response,
     msg: ResponseMessage = 'BAD_REQUEST (invalid syntax)'
 ) {
-    return sendJSONResponse( res, HTTP.BAD_REQUEST, msg );
+    return sendJSONResponse( res, HTTP.BAD_REQUEST as number, msg );
 }
 
 export function send401UnAuthorized (
     res: Response,
     msg: ResponseMessage = 'UnAuthorized'
 ) {
-    return sendJSONResponse( res, HTTP.UNAUTHORIZED, msg );
+    return sendJSONResponse( res, HTTP.UNAUTHORIZED as number, msg );
 }
 
 export function send404NotFound (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.NOT_FOUND ]
+    msg: ResponseMessage = HTTP[ HTTP.NOT_FOUND! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.NOT_FOUND, msg );
+    return sendJSONResponse( res, HTTP.NOT_FOUND as number, msg );
 }
 
 // Метод запроса не разрешен к использованию для данного URL
 export function send405MethodNotAllowed (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.METHOD_NOT_ALLOWED ]
+    msg: ResponseMessage = HTTP[ HTTP.METHOD_NOT_ALLOWED! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.METHOD_NOT_ALLOWED, msg );
+    return sendJSONResponse( res, HTTP.METHOD_NOT_ALLOWED as number, msg );
 }
 
 export function send409Conflict (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.CONFLICT ]
+    msg: ResponseMessage = HTTP[ HTTP.CONFLICT! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.CONFLICT, msg );
+    return sendJSONResponse( res, HTTP.CONFLICT as number, msg );
 }
 
 export function send500ServerError (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.INTERNAL_SERVER_ERROR ]
+    msg: ResponseMessage = HTTP[ HTTP.INTERNAL_SERVER_ERROR! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.INTERNAL_SERVER_ERROR, msg );
+    return sendJSONResponse( res, HTTP.INTERNAL_SERVER_ERROR as number, msg );
 }
 
 export function send503ServiceUnavailable (
     res: Response,
-    msg: ResponseMessage = HTTP[ HTTP.SERVICE_UNAVAILABLE ]
+    msg: ResponseMessage = HTTP[ HTTP.SERVICE_UNAVAILABLE! ] as string
 ) {
-    return sendJSONResponse( res, HTTP.SERVICE_UNAVAILABLE, msg );
+    return sendJSONResponse( res, HTTP.SERVICE_UNAVAILABLE as number, msg );
 }
 
 

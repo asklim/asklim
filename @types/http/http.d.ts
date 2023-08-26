@@ -1,6 +1,5 @@
 /// <reference types="express" />
 /// <reference types="qs" />
-import { default as StatusCodes } from './status-codes';
 declare const http: {
     send200Ok(res: import("express").Response<any, Record<string, any>>, msg?: import("../types").ResponseMessage): import("express").Response<any, Record<string, any>>;
     send201Created(res: import("express").Response<any, Record<string, any>>, msg?: import("../types").ResponseMessage): import("express").Response<any, Record<string, any>>;
@@ -15,7 +14,7 @@ declare const http: {
     sendJSONResponse(res: import("express").Response<any, Record<string, any>>, status: number, content?: import("../types").ResponseMessage): import("express").Response<any, Record<string, any>>;
     callbackError400: (req: import("express").Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs, Record<string, any>>, res: import("express").Response<any, Record<string, any>>) => import("express").Response<any, Record<string, any>>;
     callbackError405: (req: import("express").Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs, Record<string, any>>, res: import("express").Response<any, Record<string, any>>) => import("express").Response<any, Record<string, any>>;
-    StatusCodes: typeof StatusCodes;
+    StatusCodes: import("../types").TStatusCodes;
 };
 export default http;
 //# sourceMappingURL=http.d.ts.map

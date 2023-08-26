@@ -1,6 +1,9 @@
 import type { LoggingMethod } from 'loglevel';
 import type { Request, Response } from 'express';
 
+type TCodeValue = string | number;
+type TStatusCodes = Record<TCodeValue, TCodeValue>
+
 type DateTypes = number | string | Date | undefined;
 
 interface TItem {
@@ -48,6 +51,8 @@ interface IConsoleLogger {
 export type {
     DateTypes,
     TItem,
+    TCodeValue,
+    TStatusCodes,
     WorkDateOption,
     WorkDateFunction,
     ResponseMessage,

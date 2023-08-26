@@ -64,4 +64,4 @@ var StatusCodes;
     StatusCodes[StatusCodes["NETWORK_AUTHENTICATION_REQUIRED"] = 511] = "NETWORK_AUTHENTICATION_REQUIRED";
 })(StatusCodes || (StatusCodes = {}));
 exports.default = StatusCodes;
-//# sourceMappingURL=status-codes.js.map
+//# sourceMappingURL=status-codes-enum.js.map

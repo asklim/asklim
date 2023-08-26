@@ -15,10 +15,10 @@ async function stdoutImports (path) {
 }
 
 [
-    // {
-    //     esm: 'asklim/http',
-    //     cjs: 'asklim/http',
-    // },
+    {
+        esm: 'asklim/http',
+        cjs: 'asklim/http',
+    },
     // {
     //     esm: 'asklim/rsis',
     //     cjs: 'asklim/rsis',
@@ -26,10 +26,10 @@ async function stdoutImports (path) {
     //     esm: 'asklim/weeks',
     //     cjs: 'asklim/weeks',
     // },
-    {
-        esm: 'asklim',
-        cjs: 'asklim',
-    },
+    // {
+    //     esm: 'asklim',
+    //     cjs: 'asklim',
+    // },
     // {
     //     esm: 'asklim/package.json',
     //     cjs: 'asklim/package.json',

@@ -60,5 +60,4 @@ declare enum StatusCodes {
     NETWORK_AUTHENTICATION_REQUIRED = 511
 }
 export default StatusCodes;
-export type TStatusCodes = typeof StatusCodes;
-//# sourceMappingURL=status-codes.d.ts.map
+//# sourceMappingURL=status-codes-enum.d.ts.map
