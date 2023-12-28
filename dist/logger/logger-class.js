@@ -16,6 +16,9 @@ class Logger {
         const { DEBUG, TRACE } = loglevel_1.default.levels;
         loglevel_1.default.setLevel(isProduction ? DEBUG : TRACE);
     }
+    static setLogLevel(level) {
+        loglevel_1.default.setLevel(level);
+    }
     constructor(ticker = '') {
         this.debug = (...args) => loglevel_1.default.debug(this.debugPrefix('DEBUG') + DEBUG_MESSAGE_COLOR, ...args, ESCAPE_END);
         this.info = (...args) => {

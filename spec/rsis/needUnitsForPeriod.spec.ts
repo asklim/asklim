@@ -36,8 +36,11 @@ describe(
     'function needUnitsForPeriod() testing ...',
     () => {
         //['sp', 'mp', 'lp', 'xlp'].
-        for( const [key, v] of Object.entries( periods )) {
+        for(
+            const [key, v] of Object.entries( periods )
+        ) {
             test(
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
                 `period: ${v} result ${result[key]}.`,
                 () => {
                     const str = needUnitsForPeriod( item, v ).toString();
@@ -46,6 +49,7 @@ describe(
             );
         }
 
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         test(`period: ${periods?.sp} result ${result.sp!}.`,
             () => {
                 const str = needUnitsForPeriod( item, periods.sp! ).toString();

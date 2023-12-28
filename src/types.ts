@@ -1,4 +1,7 @@
-import type { LoggingMethod } from 'loglevel';
+import type {
+    LoggingMethod,
+    LogLevelDesc,
+} from 'loglevel';
 import type { Request, Response } from 'express';
 
 type TCodeValue = string | number;
@@ -57,6 +60,7 @@ export type {
     WorkDateFunction,
     ResponseMessage,
     LoggingMethod,
+    LogLevelDesc,
     Request,
     Response,
     IConsoleLogger,

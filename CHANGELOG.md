@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 - status code change to object from enum
 
-### [v0.1.2]
+### [v0.1.2]()
 
 - add Logger class
 - migrate to TypeScript@5.1

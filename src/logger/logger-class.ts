@@ -1,5 +1,5 @@
-import log from 'loglevel';
-import { IConsoleLogger } from '../types';
+import log, { LogLevelDesc } from 'loglevel';
+import { IConsoleLogger, }  from '../types';
 
 const isHeroku = process.env.DYNO && (process.env.PWD === '/app');
 const isSystemdService = (process.stdout.isTTY == undefined);
@@ -16,9 +16,15 @@ export default class Logger implements IConsoleLogger {
 
     static setLevel (
         isProduction: boolean
-    ): void {
+    ) {
         const { DEBUG, TRACE } = log.levels;
         log.setLevel( isProduction ? DEBUG : TRACE );
+    }
+
+    static setLogLevel (
+        level: LogLevelDesc
+    ) {
+        log.setLevel( level );
     }
 
     private _ticker: string;

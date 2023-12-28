@@ -46,7 +46,7 @@ describe(
                 expect( typeof rsisFactory ).toBe('function');
             }
         );
-        test(`asklim.version is function.`,
+        test(`asklim.version is string.`,
             () => {
                 const { version } = asklim;
                 expect( typeof version ).toBe('string');
